@@ -1,0 +1,517 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+.update {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 16px;
+  text-align: center;
+  color: #f28482;
+  margin: 80px auto 20px auto; /* pushed lower with top margin */
+  padding: 10px;
+  border-bottom: 2px solid #f28482;
+  display: block;
+  background-color: #fffaf0;
+  border-radius: 8px;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.05);
+  width: fit-content;
+}
+
+.form-update {
+  /* keep the flex column if you like */
+  display: flex;
+  flex-direction: column;
+  /* remove align-items so children take full width */
+  /* align-items: center; */
+  width: 100%;
+  max-width: 450px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 40px;  /* push box lower */
+
+}
+
+.form-update input,
+.form-update textarea,
+.form-update select {
+  /* fill the container (minus its padding) */
+  width: 100%;
+  /* ensure padding/border stay inside that width */
+  box-sizing: border-box;
+  padding: 8px 12px;
+  margin: 12px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.rank-entry {
+  background-color: #fef3f2;
+  border: 2px solid #f28482;
+  border-radius: 8px;
+  padding: 12px 20px;
+  margin-bottom: 10px;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 12px;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.rank-number {
+  color: #f28482;
+  font-size: 14px;
+  font-weight: bold;
+  width: 60px;
+}
+
+.rank-user {
+  color: #333;
+  flex-grow: 1;
+}
+
+.rank-stats {
+  color: #999;
+  font-size: 11px;
+}
+
+
+.middleresult {
+
+  background-color: #fffaf0;
+  padding: 30px;
+  border-radius: 12px;
+  border: 2px solid #f28482;
+  max-width: 700px;
+  margin: 50px auto;
+  text-align: left;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  margin-top: 150px;  /* push box lower */
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 50px;
+}
+.ranking {
+
+  background-color: #fffaf0;
+  padding: 30px;
+  border-radius: 12px;
+  border: 2px solid #f28482;
+  max-width: 700px;
+  margin: 50px auto;
+  text-align: left;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  margin-top: 70px;  /* push box lower */
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 50px;
+}
+
+.middleresult-title {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.middleresult p {
+  margin: 10px 0;
+  line-height: 1.6;
+}
+
+.middleresult button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #f28482;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 14px;
+}
+
+.middleresult button:hover {
+  background-color: #e17270;
+}
+
+
+
+.nav-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px; /* Optional: space from top */
+}
+
+.nav-box {
+  background-color: #f0f0f0;
+  padding: 20px 40px;
+  border-radius: 8px;
+  border: 2px solid black;
+}
+
+.nav-text {
+  font-family: 'Press Start 2P', cursive;
+  text-decoration: none;
+  font-size: 18px;
+  color: #333;
+}
+
+.scenario {
+  font-size: 30px;
+  font-weight: bold;
+  padding: 10px;
+  margin-top: 100px; /* Moves the element lower */
+}
+
+
+.choice-container {
+  display: flex; /* Aligns children horizontally */
+  gap: 20px; /* Adds space between each choice */
+  justify-content: center; /* Centers the choices horizontally */
+  flex-wrap: wrap; /* Allows wrapping if the screen is too narrow */
+}
+
+
+.timer {
+  color: pink; /* Pink font color */
+  padding: 10px 20px; /* Padding to make it look like a box */
+  border-radius: 8px; /* Rounded corners for the box */
+  font-size: 20px; /* Adjust font size as needed */
+  font-weight: bold; /* Make the text bold */
+  display: inline-block; /* Makes the box wrap tightly around the content */
+  text-align: center; /* Centers the text inside the box */
+  margin: 0 auto; /* Centers the box horizontally */
+  position: absolute; /* Allows for more control over positioning */
+  top: 75%; /* Vertically centers the box */
+  left: 50%; /* Horizontally centers the box */
+  transform: translate(-50%, -50%); /* Adjusts for the exact center */
+}
+
+.Win {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 160px;
+  text-align: center;
+  margin-top: 30vh; /* Increased from 20vh */
+  font-weight: normal;
+}
+
+.Lose {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 160px;
+  text-align: center;
+  margin-top: 25vh; /* Increased from 20vh */
+  font-weight: normal;
+}
+
+.endreason {
+  text-align: center;
+  margin-top: 15vh;
+  font-size: 20px;
+  font-family: 'Press Start 2P', cursive;
+  color: #555;
+  display: block;
+}
+
+.Title {
+  font-family: 'Press Start 2P';
+  font-size: 100px;
+  text-align: center;
+  margin-top: 30vh; /* Increased from 20vh */
+  font-weight: normal;
+  
+}
+
+.gamestart {
+  text-align: center;
+  margin: 15vh auto 0;
+  font-size: 20px;
+  font-family: 'Press Start 2P', cursive;
+  color: #555;
+  display: block;
+  width: 300px;         /* Make it shorter/narrower */
+  height: 80px;         /* Reduce height */
+  background-color: #F6BD60;
+  border: 3px solid #F6BD60;
+  border-radius: 10px;
+  box-shadow: 4px 4px #999;
+  cursor: pointer;
+}
+
+.welcome {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #555;
+
+}
+
+
+
+
+.pregame-container {
+  background-color: #F5CAC3;
+  padding: 30px;
+  border-radius: 12px;
+  margin: 40px auto;
+  max-width: 700px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  color: #333; /* Ensure text is readable */
+  font-family: 'Arial', sans-serif;
+  margin-top: 170px; /* Adjust the value as needed */
+}
+
+
+
+.description {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  color: #555;
+
+}
+
+.mission p {
+  margin: 6px 0;
+  font-size: 1rem;
+  color: #555;
+
+}
+
+button {
+  background-color: #84A59D;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: black;
+}
+
+
+/* .pregame-container {
+  padding: 2rem;
+  max-width: 700px;
+  margin: auto;
+  background: var(--background-color);
+  border-radius: 16px;
+  box-shadow: 0 4px 12px var(--shadow-color);
+} */
+
+/* .Title {
+  font-size: 2rem;
+  color: var(--text-color);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.description, .mission {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  text-align: center;
+} */
+
+.section-title {
+  margin-top: 2rem;
+  color: var(--primary-color);
+  font-size: 1.5rem;
+}
+
+.instruction-list, .goal-list {
+  margin-top: 1rem;
+  padding-left: 1.2rem;
+}
+/* index.css */
+
+/* Set the background color of the entire page */
+body {
+  background-color: #84A59D; /* Changed to #84A59D for the whole page background */
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* General styles for the form container */
+.form-container {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white; /* Keep form background white for contrast */
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-log {
+  /* keep the flex column if you like */
+  display: flex;
+  flex-direction: column;
+  /* remove align-items so children take full width */
+  /* align-items: center; */
+  width: 100%;
+  max-width: 450px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 70px;  /* push box lower */
+
+}
+
+.form-log input,
+.form-log textarea,
+.form-log select {
+  /* fill the container (minus its padding) */
+  width: 100%;
+  /* ensure padding/border stay inside that width */
+  box-sizing: border-box;
+  padding: 8px 12px;
+  margin: 12px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.login-container {
+  margin-top: 150px;  /* adjust as needed */
+}
+
+
+
+
+
+/* Heading style */
+h1 {
+  text-align: center;
+  color: #F5CAC3; /* Light color for contrast */
+  font-family: 'Arial', sans-serif;
+  margin-bottom: 20px;
+}
+
+/* Label styles */
+.labels {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #F5CAC3; /* Light color for contrast */
+}
+
+/* Input field styles */
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 16px;
+  border: 1px solid #F28482; /* Warm pink border */
+  border-radius: 4px;
+  font-size: 16px;
+  outline: none;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  border-color: #F6BD60; /* Yellowish border on focus */
+}
+
+/* Button style */
+.button-class {
+  position: absolute; /* Position the button absolutely */
+  top: 10px; /* Adjust the distance from the top */
+  right: 10px; /* Adjust the distance from the right */
+  width: auto; /* Ensure the button doesn’t take up full width */
+  padding: 12px;
+  background-color: #F28482; /* Warm pink button */
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+
+.button-class:hover {
+  background-color: #F6BD60; /* Yellowish color on hover */
+}
+
+/* Error message styles */
+p {
+  color: #F6BD60; /* Error messages in yellow */
+  font-size: 14px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+
+/* ddddddf */
+/* index.css */
+
+/* Style for the container to align cards horizontally */
+.Choice-container {
+  display: flex;
+  justify-content: space-around; /* Space out the cards */
+  gap: 20px; /* Add gap between cards */
+  flex-wrap: wrap; /* Ensure the cards wrap if screen size is small */
+  margin: 20px;
+}
+
+/* Styling for each choice card */
+.Choice-card {
+  background-color: #FFFFFF; /* White background for the card */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Card shadow */
+  padding: 20px;
+  width: 250px; /* Set width for uniform card size */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for the card */
+.Choice-card:hover {
+  transform: scale(1.05); /* Slight scale on hover */
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+/* Styling for the heading inside the card */
+.h3 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #F28482; /* Use warm color for emphasis */
+  margin-bottom: 10px;
+}
+
+/* Style for the effects inside the card */
+.Choice-effects {
+  margin-bottom: 15px;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Button styling inside the card */
+button {
+  padding: 10px;
+  background-color: #F28482; /* Use the same warm pink for buttons */
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect on the button */
+button:hover {
+  background-color: #F6BD60; /* Lighter yellow on hover */
+}
