@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 
 function MiddleResult({ timer, scenario, simulation, choice, onNext }) {
   const [resultData, setResultData] = useState(null);
-  const daysPassed = timer;
+  // const daysPassed = timer;
   const population = simulation.population; // make sure this exists in simulation
 
   useEffect(() => {

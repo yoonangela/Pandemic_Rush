@@ -1,4 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+.simulationbut {
+  display: inline-block;
+  padding: 4px 10px;
+  margin: 5px;
+  font-size: 12px;
+  font-family: 'Press Start 2P', cursive;
+  background-color: #f28482;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  width: auto; /* prevents full-width */
+  height: auto;
+  white-space: nowrap;
+}
+
+.simulationbut:hover {
+  background-color: #e17270;
+}
+
+/* Style delete 'X' buttons next to each policy */
+.simulationbut.delete {
+  padding: 2px 6px;
+  font-size: 10px;
+  margin-left: 8px;
+  background-color: #aaa;
+  color: white;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
 .update {
   font-family: 'Press Start 2P', cursive;
   font-size: 16px;
@@ -163,6 +195,8 @@
   font-size: 18px;
   color: #333;
 }
+
+
 
 .scenario {
   font-size: 30px;

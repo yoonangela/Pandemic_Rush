@@ -44,6 +44,12 @@ function NavBar({ setUser, user }) {
             Settings
           </NavLink>
         </nav>
+        <nav className="nav-container">
+        <NavLink to={`/simulation`} className="nav-text">
+
+            Simulation
+          </NavLink>
+        </nav>
       </>
     );
   }

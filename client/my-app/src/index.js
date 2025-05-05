@@ -6,6 +6,8 @@ import Pregame2 from "./components/Pregame2";
 import Pregame3 from "./components/Pregame3";
 import Rank from "./components/Rank";
 import Settings from "./components/Settings";
+import Simulation from "./components/Simulation";
+
 
 
 
@@ -44,6 +46,10 @@ const router = createBrowserRouter([
       {
         path: "users/:id/settings",
         element: <Settings />,
+      },
+      {
+        path: "simulation",
+        element: <Simulation />,
       }
     ],
   },
