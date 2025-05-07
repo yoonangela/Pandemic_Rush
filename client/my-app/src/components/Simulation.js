@@ -7,8 +7,8 @@ import {
 function Simulation() {
   const [population, setPopulation] = useState(100000);
   const [initialInfected, setInitialInfected] = useState(1);
-  const [beta, setBeta] = useState(0.3);   // infection rate
-  const [gamma, setGamma] = useState(0.1); // recovery rate
+  const [beta, setBeta] = useState(0.3);   
+  const [gamma, setGamma] = useState(0.1); 
   const [data, setData] = useState([]);
   const [policies, setPolicies] = useState([]);
 
@@ -22,8 +22,7 @@ function Simulation() {
     let currentBeta = beta;
     let currentGamma = gamma;
 
-    for (let t = 0; t <= 60; t++) {
-      // Apply policies if any at this day
+    for (let t = 0; t <= 100; t++) {
       policies.forEach(policy => {
         if (policy.day === t) {
           if (policy.type === "mask") currentBeta *= 0.85;
@@ -47,10 +46,10 @@ function Simulation() {
   function handleAddPolicy() {
     const type = document.getElementById("policyType").value;
     const day = parseInt(document.getElementById("policyDay").value);
-    if (day >= 0 && day <= 60) {
+    if (day >= 0 && day <= 100) {
       setPolicies([...policies, { type, day }]);
     } else {
-      alert("Please choose a valid day (0–60)");
+      alert("Please choose a valid day (0–100)");
     }
   }
 
@@ -62,7 +61,11 @@ function Simulation() {
 
   return (
     <>
-      <h1 className="simulation">Interactive SIR Simulation</h1>
+        <div className="simulation-box">
+        <h1 className="simulation">Interactive SIR Simulation</h1>
+        </div>
+        
+        <div className="simulation-box1">
 
       <div style={{ textAlign: "center", margin: "20px" }}>
         <label>
@@ -83,10 +86,12 @@ function Simulation() {
         </label>
         <button onClick={runSimulation} style={{ marginLeft: "20px" }}>Run</button>
       </div>
+      </div>
 
-      <div style={{ textAlign: "center", marginBottom: "20px" }}>
+
+      <div className="policy-1">
         <label>
-          Policy:
+          Policy:     
           <select id="policyType">
             <option value="mask">Mask Mandate</option>
             <option value="distancing">Social Distancing</option>
@@ -94,8 +99,8 @@ function Simulation() {
           </select>
         </label>
         <label style={{ marginLeft: "10px" }}>
-          Apply on day:
-          <input type="number" id="policyDay" min="0" max="60" defaultValue="10" />
+          Apply on day: 
+          <input type="number" id="policyDay" min="0" max="100" defaultValue="10" />
         </label>
         <button
           style={{ marginLeft: "10px" }}
@@ -127,11 +132,12 @@ function Simulation() {
           </button>
         </div>
       )}
-
+    
+      <div style={{ backgroundColor: "#F5CAC3", padding: "20px", borderRadius: "12px" , margin: "0 auto", width: "1100px" }}>
       <ResponsiveContainer width="100%" height={400}>
         <LineChart data={data}>
           <CartesianGrid stroke="#ccc" />
-          <XAxis dataKey="day" label={{ value: "Days", position: "insideBottom", offset: -5 }} />
+          <XAxis dataKey="day" label={{ value: "Days", position: "insideBottom", offset: -10 }} />
           <YAxis />
           <Tooltip />
           <Legend />
@@ -140,6 +146,8 @@ function Simulation() {
           <Line type="monotone" dataKey="Recovered" stroke="#82ca9d" />
         </LineChart>
       </ResponsiveContainer>
+    </div>
+
     </>
   );
 }

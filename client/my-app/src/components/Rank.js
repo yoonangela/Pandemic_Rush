@@ -15,17 +15,11 @@ function Rank(){
   }, [result]);
 
   console.log(result)
-  console.log(Array.isArray(result));  // check if it's really an array
+  console.log(Array.isArray(result));  
   
 
 
-    // return(
-    // <>
-    // <h1 className='Rank'>Rank</h1>
-    // {result.map((r, index) => (
-    // <div key={index}> Rank{index+1} user:{r.simulation.user_id}  {Math.round(r.final_I)} people infected </div>
-    // ))}
-    // </>)
+
 
     return (
         <div className="ranking">

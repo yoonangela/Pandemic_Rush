@@ -2,9 +2,13 @@ import React, { useState, useEffect } from "react";
 import ChoiceCard from "./ChoiceCard";
 import MiddleResult from "./MiddleResult";
 import Result from "./Result";
+import { useOutletContext } from "react-router-dom";
+
 
 
 function Pregame3() {
+  const { user } = useOutletContext();
+
   const [order, setOrder] = useState(1);
   const [scenario, setScenario] = useState("");
   const [simulation, setSimulation] = useState(null);  // to store simulation data
@@ -12,20 +16,21 @@ function Pregame3() {
   const [isRunning, setIsRunning] = useState(false);  // flag to check if simulation is running
   const [selectedChoice, setSelectedChoice] = useState(null);
 
+  console.log(user)
   function handleChoiceClick(choice) {
     setSelectedChoice(choice); // show middle result
     }
 
   function handleNextScenario() {
-    setSelectedChoice(null);  // hide middle result
-    setOrder((prev) => prev + 1); // show next scenario
+    setSelectedChoice(null);  
+    setOrder((prev) => prev + 1); 
     }
 
 
   useEffect(() => {
     const startSimulation = async () => {
         const simulationData = {
-            user_id: 1, //change to the user
+            user_id: user.id, //change to the user
             total_population: 100000,
             current_b: 0.056,  // Increase infection rate to make the virus spread faster
             current_g: 0.002, // Decrease recovery rate to make recovery slower

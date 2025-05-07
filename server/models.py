@@ -19,6 +19,12 @@ class User(db.Model, SerializerMixin):
     simulations = db.relationship('Simulation', back_populates='user',)
 
     serialize_only = ('id', 'username') 
+
+    # @validates('username')
+    # def validate_username(self, key, value):
+    #     if len(value) < 3:
+    #         raise ValueError("usermust must be at least 4 characters long.")
+    #     return value
     
     @hybrid_property
     def password_hash(self):
@@ -45,6 +51,12 @@ class Scenario(db.Model, SerializerMixin):
 
     # serialize_rules = ("-choices.scenario", "-simulation_choices.scenario",)  # Exclude circular references
     serialize_only = ('id','description','order')
+
+    @validates('description')
+    def validate_description(self, key, value):
+        if len(value) < 10:
+            raise ValueError("Description must be at least 10 characters long.")
+        return value
 
 class Choice(db.Model, SerializerMixin):
     __tablename__ = "choices"
