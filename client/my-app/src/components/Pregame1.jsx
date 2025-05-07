@@ -7,7 +7,7 @@ function Pregame1(){
 
   useEffect(() => {
     if (nextClicked) {
-      navigate("/pregame2"); // Use an absolute path to navigate
+      navigate("/pregame2"); 
     }
   }, [nextClicked, navigate]);
 

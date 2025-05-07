@@ -17,6 +17,7 @@ function SignUpForm({ onLogin }) {
       headers: {
         "Content-Type": "application/json",
       },
+      credentials: "include", 
       body: JSON.stringify({
         username,
         password,
@@ -66,7 +67,7 @@ function SignUpForm({ onLogin }) {
           autoComplete="current-password"
         />
 
-        <button className="button-class" type="submit">
+        <button className="b" type="submit">
           {isLoading ? "Loading..." : "Sign Up"}
         </button>
 

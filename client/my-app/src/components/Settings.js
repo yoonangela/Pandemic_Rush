@@ -15,7 +15,6 @@ function Settings(){
       return;
     }
 
-    // Only proceed if password fields match if they are provided
     if (password || passwordConfirmation) {
       if (password !== passwordConfirmation) {
         alert("The passwords have to match 🐸");
@@ -23,15 +22,12 @@ function Settings(){
       }
     }
 
-    // Prepare the request body with the fields to update
     const body = {};
 
-    // Include the username in the request only if it was changed
     if (username !== '') {
       body.username = username;
     }
 
-    // Include password change only if passwords are filled in
     if (password) {
       body.password = password;
     }
